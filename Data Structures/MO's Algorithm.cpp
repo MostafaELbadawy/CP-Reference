@@ -22,9 +22,9 @@ void remove(int x) {
 
 void solve(int l, int r,int ind) {
     r+=1;
-    while (cul < l) remove(cul++);
-    while (cul > l) add(--cul);
     while (cur < r) add(cur++);
+    while (cul > l) add(--cul);
+    while (cul < l) remove(cul++);
     while (cur > r) remove(--cur);
     ansq[ind] = ans;
 }
